@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "description": "blog application with node.js",
+  "main": "app.js",
+  "authors": [
+    "Todor Georgiev"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/georgievtodor/Blog-Node.JS",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "toastr": "^2.1.3",
+    "jquery-ui": "^1.12.1",
+    "material-kit": "^1.1.0"
+  }
+}

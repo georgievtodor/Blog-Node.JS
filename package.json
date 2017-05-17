@@ -1,0 +1,43 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "blog application with node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgievtodor/Blog-Node.JS.git"
+  },
+  "author": "Todor Georgiev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgievtodor/Blog-Node.JS/issues"
+  },
+  "homepage": "https://github.com/georgievtodor/Blog-Node.JS#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "bower": "^1.8.0",
+    "cookie-parser": "^1.4.3",
+    "crypto": "0.0.3",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "locutus": "^2.0.8",
+    "mongoose": "^4.9.9",
+    "multer": "^1.3.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.0-rc.1",
+    "typings": "^2.1.1"
+  },
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.19.0",
+    "mocha": "^3.4.1",
+    "nodemon": "^1.11.0",
+    "sinon": "^2.2.0"
+  }
+}
