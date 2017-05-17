@@ -1,0 +1,49 @@
+extends _layout
+
+block content
+    // Page Header
+    // Set your background image for this header on the line below.
+    header.intro-header(style="background-image: url('/static/images/blog-images/" + result.blogPost.image + "')")
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+            .post-heading
+              h1 #{result.blogPost.title}
+              |                         
+              h2.subheading #{result.blogPost.subTitle}
+              |                         
+              span.meta
+                p Posted on #{result.blogPost.formatedDate}
+    // Post Content
+    article
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+            #{result.blogPost.description}
+
+    br
+    br
+    br
+    br
+    hr
+    h3 COMMENTS
+    hr
+
+    each answer in result.blogPost.answers
+        p
+            p #{answer.author}
+            strong #{answer.content}
+        hr
+
+
+    br
+    br
+    hr
+    h3 LEAVE A COMMENT
+    form(method='post' action='/posts/' + result.blogPost._id + '/comment')
+        p
+            input(id='author' name='author' value='' size='22' tabindex='1' type='text' placeholder='Anonymous')
+
+        p
+            textarea(id='comment', name='comment', cols='100%' rows='10' tabindex='2')
+        input(type='submit', name='submit', value='Submit comment')

@@ -1,0 +1,62 @@
+extends _layout
+
+block content
+
+    // Set your background image for this header on the line below.
+    header.intro-header(style="background-image: url('/static/images/header-bg.jpg')")
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+            .site-heading
+              h1 Welcome to my blog
+                      
+              hr.small
+                      
+              span.subheading A simple blog made with Node js
+    // Main Content
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+            each blogPost in result.blogPosts
+                .post-preview
+                    a(href='/posts/' + blogPost._id)
+                        h2.post-title #{blogPost.title}
+                        |                         
+                        h3.post-subtitle #{blogPost.subTitle}
+                        |                     
+                    p.post-meta
+                    h4 Created on #{blogPost.formatedDate}
+                |                 
+                hr
+                |                 
+
+
+    hr
+//-     .wrapper
+//-         .header.header-filter(style="background-image: url('/static/images/header-bg.jpg');")
+//-             .container(style='margin-top: 50px')
+//-                 .row
+//-                     .center-padding
+//-                         h1.main-heading TEST HEADER
+//-     .main
+//-         .container
+//-         .section.text-center.section-landing
+//-             .row
+//-                 .col-md-8.col-md-offset-2
+//-                     .table-responsive
+//-                         table.table.forum.table-striped
+//-                             thead
+//-                                 tr 
+//-                                     th.cell-stat.text.center.hidden-xs.hidden-sm
+//-                                         h3 Posts
+//-                                     th
+//-                             tbody
+//-                             each blogPost in result.blogPosts
+//-                                 tr(id='post-info', data-id=blogPost._id)
+//-                                     td
+//-                                         h3
+//-                                             a(href='/posts' + blogPost._id)= blogPost.title
+//-                                             br
+//-                                             small #{blogPost.description}
+
+                
