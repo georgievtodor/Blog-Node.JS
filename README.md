@@ -1,0 +1,1 @@
+# Simple blog made with NODE.JS and pug as template engine for practicing
